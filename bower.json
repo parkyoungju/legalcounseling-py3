@@ -1,0 +1,10 @@
+{
+  "name": "amazonmall",
+  "dependencies": {
+    "bootstrap": "",
+    "jquery": "",
+    "font-awesome": "",
+    "highlightjs": "",
+    "typeahead.js": ""
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}법률상담{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="${static('packages/bootstrap/dist/css/bootstrap.css')}"/>
+    <link rel="stylesheet" type="text/css" href="${'theme/bootstrap-theme.min.css'|static}"/>
+    <link rel="stylesheet" type="text/css" href="${static('theme/layout.css')}"/>
+    <link rel="stylesheet" type="text/css" href="${static('theme/colors.css')}"/>
+    <link rel="stylesheet" type="text/css" href="${static('theme/light.css')}"/>
+    <link rel="stylesheet" type="text/css" href="${static('packages/font-awesome/css/font-awesome.min.css')}">
+    <script type="text/javascript" src="${static('packages/jquery/dist/jquery.js')}"></script>
+    <script type="text/javascript" src="${static('packages/bootstrap/dist/js/bootstrap.js')}"></script>
+    <link rel="stylesheet" type="text/css" href="${static('style.css')}?1"/>
+    <script type="text/javascript" src="${static('common.js')}"></script>
+</head>
+<body>
+    <div id="mainHeader" class="navbar navbar-defualt navbar-fixed-top">
+        {% block navbar %}
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="hidden-xs"><span class="hidden-xs">법률상담</span></a>
+            </div>
+            <ul class="nav navbar-nav flat">
+                상담목록
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                로그인
+            </ul>
+        </div>
+        {% endblock %}
+    </div>
+</body>
+</html>
