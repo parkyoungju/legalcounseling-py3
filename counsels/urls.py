@@ -4,5 +4,5 @@ from counsels import views
 
 urlpatterns = patterns('',
                        url(r'^$', views.index, name='index'),
-                       url(r'^post', views.post)
+                       url(r'^post', views.post, name='post')
                        )

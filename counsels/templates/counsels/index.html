@@ -1,33 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{% block title %}법률상담{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="${static('packages/bootstrap/dist/css/bootstrap.css')}"/>
-    <link rel="stylesheet" type="text/css" href="${'theme/bootstrap-theme.min.css'|static}"/>
-    <link rel="stylesheet" type="text/css" href="${static('theme/layout.css')}"/>
-    <link rel="stylesheet" type="text/css" href="${static('theme/colors.css')}"/>
-    <link rel="stylesheet" type="text/css" href="${static('theme/light.css')}"/>
-    <link rel="stylesheet" type="text/css" href="${static('packages/font-awesome/css/font-awesome.min.css')}">
-    <script type="text/javascript" src="${static('packages/jquery/dist/jquery.js')}"></script>
-    <script type="text/javascript" src="${static('packages/bootstrap/dist/js/bootstrap.js')}"></script>
-    <link rel="stylesheet" type="text/css" href="${static('style.css')}?1"/>
-    <script type="text/javascript" src="${static('common.js')}"></script>
-</head>
-<body>
-    <div id="mainHeader" class="navbar navbar-defualt navbar-fixed-top">
-        {% block navbar %}
-        <div class="container">
-            <div class="navbar-header">
-                <a href="/" class="hidden-xs"><span class="hidden-xs">법률상담</span></a>
-            </div>
-            <ul class="nav navbar-nav flat">
-                상담목록
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                로그인
-            </ul>
+{% extends "counsels/layout.html" %}
+
+{% block content %}
+<div class="container" style="padding-top: 20px">
+
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <a href="{% url 'post' %}?category=COUNSELING">
+                <div class="pricingBloc focusPlan">
+                    <h3>간편 법률 상담</h3>
+                    <ul>
+                        <li></li>
+                    </ul>
+
+                </div>
+            </a>
         </div>
-        {% endblock %}
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <a href="{% url 'post' %}?category=REQUEST_ADVICE">
+                <div class="pricingBloc focusPlan">
+                    <h3>법률 상담 의뢰</h3>
+                    <ul>
+                        <li>상담 받고 싶은 내용을 올리면 변호사가 확인 후 예상 비용을 제시합니다.
+                            그 비용을 입금하시면 확인 후 상담이 진행 됩니다.</li>
+                    </ul>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <a href="{% url 'post' %}?category=CERTIFICATION">
+            <div class="pricingBloc focusPlan">
+                <h3>내용증명 고소장 작성</h3>
+                <ul>
+                    <li></li>
+                </ul>
+
+            </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <a href="{% url 'post' %}?category=CAR_ACCIDENT">
+            <div class="pricingBloc focusPlan">
+                <h3>교통사고 과실비율 추정</h3>
+                <ul>
+                    <li></li>
+                </ul>
+
+            </div>
+            </a>
+        </div>
     </div>
-</body>
-</html>
+</div>
+{% endblock %}
