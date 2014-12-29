@@ -1,8 +1,10 @@
 from django.conf.urls import patterns, url
-from counsels import views
+
+from counsels.controllers import counsel, account
 
 
 urlpatterns = patterns('',
-                       url(r'^$', views.index, name='index'),
-                       url(r'^post', views.post, name='post')
-                       )
+   url(r'^$', counsel.index, name='index'),
+   url(r'^post', counsel.post, name='post'),
+   url(r'^login', account.login, name='login')
+)

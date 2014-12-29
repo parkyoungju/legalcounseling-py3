@@ -1,12 +1,12 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from counsels import views
+
+from counsels.controllers import counsel, account
+
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'legalcounseling_py3.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
     url(r'^counsels/', include('counsels.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.index, name='index'),
+    url(r'^$', counsel.index, name='index'),
+    url(r'^login', account.login, name='login')
 )
